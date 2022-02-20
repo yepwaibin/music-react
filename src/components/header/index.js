@@ -9,9 +9,15 @@ import { headerLinks } from "@/common/local-data";
 import { HeaderWrapper, HeaderLeft, HeaderRight } from "./style";
 
 export default memo(function Header() {
+  // 业务代码
   const showSelectItem = (item, index) => {
     if (index < 3) {
-      return <NavLink to={item.link}>{item.title}</NavLink>;
+      return (
+        <NavLink to={item.link} exact>
+          {item.title}
+          <i className="sprite_01 icon"></i>
+        </NavLink>
+      );
     } else {
       return <a href={item.link}>{item.title}</a>;
     }
@@ -20,7 +26,9 @@ export default memo(function Header() {
     <HeaderWrapper>
       <div className="content wrap-v1">
         <HeaderLeft>
-          <a href="#/" className="logo sprite_01" >网易云音乐</a>
+          <a href="#/" className="logo sprite_01">
+            网易云音乐
+          </a>
           <div className="select-list">
             {headerLinks.map((item, index) => (
               <div className={classnames("select-item")} key={item.title}>

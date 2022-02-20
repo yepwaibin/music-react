@@ -1,4 +1,7 @@
 import styled from "styled-components";
+
+import spirit01 from "@/assets/img/sprite_01.png"
+
 export const HeaderWrapper = styled.div`
   height: 75px;
   font-size: 14px;
@@ -19,6 +22,7 @@ export const HeaderWrapper = styled.div`
 export const HeaderLeft = styled.div`
   display: flex;
   .logo {
+    /* 设置a标签的高度和宽度 */
     display: block;
     width: 174px;
     height: 69px;
@@ -43,7 +47,8 @@ export const HeaderLeft = styled.div`
           content: "";
           width: 28px;
           height: 19px;
-          background-image: url(${require("@/assets/img/sprite_01.png")});
+          /* background-image: url(${require("@/assets/img/sprite_01.png")}); */
+          background-image: url(${spirit01});
           background-position: -190px 0;
           top: 20px;
           right: -15px;
