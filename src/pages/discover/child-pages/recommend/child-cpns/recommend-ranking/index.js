@@ -19,9 +19,6 @@ const RecommendRanking = memo(() => {
     dispatch(getTopListAction(3));
   }, [dispatch])
 
-  console.log('here', topUpList);
-  console.log(topNewList);
-  console.log(topOriginList);
   return (
     <RankingWrapper>
       <ThemeHeaderRcm title="榜单" />

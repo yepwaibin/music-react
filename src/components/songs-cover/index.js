@@ -23,9 +23,9 @@ const SongsCover = memo((props) => {
       <div className='cover-bottom text-nowrap'>
         {info.name}
       </div>
-      <div className='cover-source'>
+      {/* <div className='cover-source'>
         by {info.copywriter || info.creator.nickname}
-      </div>
+      </div> */}
     </ThemeCoverWrapper>
   )
 })
