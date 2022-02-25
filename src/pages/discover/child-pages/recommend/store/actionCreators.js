@@ -5,6 +5,7 @@ import {
   getHotRecommends,
   getNewAlbums,
   getTopList,
+  getResidentSinger
 } from "@/services/recommend";
 
 const changeBannerAction = (res) => ({
@@ -36,6 +37,11 @@ const changeTopOriginListAction = (res) => ({
   type: actionTypes.CHANGE_ORIGIN_LIST,
   topOriginList: res.playlist,
 });
+
+const changeResidentSingerAction = (res) => ({
+  type: actionTypes.CHANGE_SETTLE_SONGER,
+  residentSinger: res.artists
+})
 
 export const getBanner = () => {
   return (dispatch) => {
@@ -79,3 +85,11 @@ export const getTopListAction = (idx) => {
     });
   };
 };
+
+export const getResidentSingerAction = (limit, cat) => {
+  return dispatch => {
+    getResidentSinger(limit, cat).then(res => {
+      dispatch(changeResidentSingerAction(res))
+    })
+  }
+}

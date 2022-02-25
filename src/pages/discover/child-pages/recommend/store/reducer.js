@@ -8,6 +8,7 @@ const defaultState = Map({
   topUpList: {},
   topNewList: {},
   topOriginList: {},
+  residentSinger: []
 });
 
 const reducer = (state = defaultState, action) => {
@@ -24,6 +25,8 @@ const reducer = (state = defaultState, action) => {
       return state.set("topNewList", action.topNewList);
     case actionType.CHANGE_ORIGIN_LIST:
       return state.set("topOriginList", action.topOriginList);
+    case actionType.CHANGE_SETTLE_SONGER:
+      return state.set("residentSinger", action.residentSinger)
     default:
       return state;
   }

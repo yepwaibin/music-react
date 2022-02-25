@@ -23,9 +23,9 @@ const TopBanner = memo(() => {
     dispatch(getBanner());
   }, [dispatch]);
 
-  const bannerChange = useCallback((from, to) => {
+  const bannerChange = useCallback((current) => {
     setTimeout(() => {
-      setCurrentIndex(from);
+      setCurrentIndex(current);
     }, 0);
   }, []);
 
@@ -39,7 +39,7 @@ const TopBanner = memo(() => {
           <Carousel
             autoplay
             effect="fade"
-            beforeChange={bannerChange}
+            afterChange={bannerChange}
             ref={bannerRef}
           >
             {state.banners.map((item, index) => {

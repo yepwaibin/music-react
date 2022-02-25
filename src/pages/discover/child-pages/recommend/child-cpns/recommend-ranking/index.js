@@ -18,7 +18,7 @@ const RecommendRanking = memo(() => {
     dispatch(getTopListAction(2));
     dispatch(getTopListAction(3));
   }, [dispatch])
-
+  
   return (
     <RankingWrapper>
       <ThemeHeaderRcm title="榜单" />
