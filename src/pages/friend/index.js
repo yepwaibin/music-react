@@ -1,10 +1,19 @@
-import React, { memo } from 'react'
+import React, { memo } from "react";
 
-export default memo(function Friend() {
+import { FriendWrapper } from "./style";
+
+const Friend = memo(() => {
   return (
-    <div>
-      Friend
-    </div>
-  )
-})
+    <FriendWrapper>
+      <div className="content wrap-v2">
+        <div className="pic">
+          <a className="login" href="/#">
+            立即登录
+          </a>
+        </div>
+      </div>
+    </FriendWrapper>
+  );
+});
 
+export default Friend;
