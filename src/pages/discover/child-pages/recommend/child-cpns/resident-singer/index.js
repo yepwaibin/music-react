@@ -9,7 +9,6 @@ const ResidentSinger = memo(() => {
   const { residentSinger } = useSelector((state) => ({
     residentSinger: state.getIn(["recommend", "residentSinger"]),
   }));
-  console.log(residentSinger);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getResidentSingerAction(5, 5001));
