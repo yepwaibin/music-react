@@ -1,72 +1,60 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 网易云音乐PC项目实战
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 项目介绍
 
-## Available Scripts
+基于 `react` + `redux` + `react-router` + `styled-components` + `axios` + `ant design` + `react-redux` + `redux-thunk` `immutable` + `redux-immutable`等开发一款PC端「网易云音乐PC」 Web项目。
 
-In the project directory, you can run:
+## 预览地址
 
-### `yarn start`
+- http://47.106.142.199
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 实现功能
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 页面之间切换和跳转
+- 首页/热门推荐/新碟上架/榜单数据展示
+- 排行榜数据展示
+- 播放器功能
+- 歌曲切换
+  - 顺序播放/单曲循环/随机播放
 
-### `yarn test`
+## 技术栈
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 前端
 
-### `yarn build`
+- `React`：用于构建用户界面的 `MVVM` 框架
+- `styled-components`：用于编写组件样式，并解决样式冲突问题
+- `axios`: 发送网络请求，请求拦截和响应拦截
+- `react-router`：为单页面应用提供的路由系统
+- `react-router-config`：集中式路径映射表管理
+- `redux`：React 集中状态管理，在多个组件共享某些状态时非常方便
+- `react-redux`：帮助我们链及`redux`、`react`的辅助工具
+- `immutable`：对`reudx`中保存的`state`使用`immutable`进行管理
+- `redux-immutable`: 对根目录的`reducer`中`state`进行管理
+- `redux-thunk`: 在`redux`中进行异步请求
+- 项目中的优化: 函数式组件全部采用`memo`、路由懒加载
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 后端
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [NeteaseCloudMusicApi](https://binaryify.github.io/NeteaseCloudMusicApi/#/)：网易云音乐 `NodeJS` 版 `API`，提供音乐数据
+- `Node.js`：利用 `Express` 搭建的本地测试服务器
+- `axios`：用来请求后端 `API` 音乐数据
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 其他
 
-### `yarn eject`
+- create-react-app：React 脚手架工具
+- eslint：用于代码规范
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 收获
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
+- 了解一个项目的大致流程
+  - 画出流程图，大致描述各子页面的元素和用户的跳转关，使用React-Router分发路由和渲染
+  - 对项目进行划分目录结构
+  - 确定代码规范
+  - 分析网站布局，思考代码有无重复，可以抽成单个组件进行复用
+  - 思考数据的存放的位置
+- 理解SPA的本质就是“如何管理负责的页面关系”
+  - 处理好如何拆分页面
+  - 页面之间的跳转和切换，信息传递，数据共享如何完成
+- 学习到如何进行性能优化
+  - 函数组件使用memo
+  - 路由进行懒加载

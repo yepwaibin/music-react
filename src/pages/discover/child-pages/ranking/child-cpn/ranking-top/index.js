@@ -19,7 +19,8 @@ const RankingTop = memo(() => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const id = (topList[currentIndex] && topList[currentIndex].id);
+    const id = topList[currentIndex] && topList[currentIndex].id;
+    console.log(id);
     if (!id) return;
     dispatch(getPlayListAction(id));
   }, [topList, dispatch, currentIndex]);
@@ -29,6 +30,7 @@ const RankingTop = memo(() => {
     const id = topList[currentIndex].id;
     dispatch(getPlayListAction(id));
   };
+
   return (
     <RankingTopWrapper>
       {topList.map((item, index) => {

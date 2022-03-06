@@ -8,6 +8,7 @@ const RankingList = memo(() => {
     playList: state.getIn(["ranking", "playList"]),
   }));
   const tracks = playList.tracks || [];
+
   return (
     <RankingListWrapper>
       <div className="title-top">

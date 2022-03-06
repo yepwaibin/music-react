@@ -5,17 +5,17 @@ import { TopRankingWrapper } from "./style";
 
 import { useDispatch } from "react-redux";
 import { getSongDetailAction } from "@/pages/player/store";
+import { NavLink } from "react-router-dom";
 
 const TopRanking = memo((props) => {
   const { info } = props;
   const { tracks = [] } = info;
-
   const dispatch = useDispatch();
 
   const playMusic = (item) => {
-    console.log(item, item.id);
     dispatch(getSongDetailAction(item.id));
   };
+
   return (
     <TopRankingWrapper>
       <div className="header">
@@ -56,7 +56,7 @@ const TopRanking = memo((props) => {
         })}
       </div>
       <div className="footer">
-        <a href="/todo">查看全部 &gt;</a>
+        <NavLink to="/discover/toplist">查看全部 &gt;</NavLink>
       </div>
     </TopRankingWrapper>
   );

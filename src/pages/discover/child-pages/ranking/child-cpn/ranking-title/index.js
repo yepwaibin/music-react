@@ -1,15 +1,19 @@
 import React, { memo } from "react";
 import { shallowEqual, useSelector } from "react-redux";
 
-import SongOperationBar from '@/components/song-operation-bar'
+import SongOperationBar from "@/components/song-operation-bar";
 
 import { RankingTitleWrapper } from "./style";
 import { formatMonthDay } from "@/utils/format-utils";
 
 const RankingTitle = memo(() => {
-  const { topInfo = {} } = useSelector((state) => ({
-    topInfo: state.getIn(["ranking", "playList"]),
-  }), shallowEqual);
+  const { topInfo = {} } = useSelector(
+    (state) => ({
+      topInfo: state.getIn(["ranking", "playList"]),
+    }),
+    shallowEqual
+  );
+
   return (
     <RankingTitleWrapper>
       <div className="image">

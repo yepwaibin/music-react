@@ -4,6 +4,7 @@ import * as actionTypes from "./constants";
 const defaultState = Map({
   topList: [],
   currentIndex: 0,
+  playList: {}
 });
 
 const reducer = (state = defaultState, action) => {
